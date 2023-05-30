@@ -6,14 +6,14 @@ services:
   php:
     build: context
     environment:
-      DRUPAL_TRUSTED_HOST_PATTERNS: '^staging.embassy.science$$'
+      DRUPAL_TRUSTED_HOST_PATTERNS: '"^localhost$$"'
       PHP_SENDMAIL_PATH: '"/usr/bin/dos2unix -u | /usr/sbin/ssmtp -t -f"'
       PHP_FPM_CLEAR_ENV: "no"
     volumes:
       - *codebase
 
   crond:
-    image: wodby/drupal:7-8.0
+    image: wodby/drupal:9-8.1
     environment:
       CRONTAB: "0 * * * * drush -r /var/www/html/web cron"
       PHP_FPM_CLEAR_ENV: "no"
@@ -34,7 +34,7 @@ services:
       # Erst, wenn der nginx den h5p-Link nimmt:
       # NGINX_SERVER_ROOT: /var/www/html/root
       NGINX_SERVER_ROOT: /var/www/html/web
-      NGINX_VHOST_PRESET: drupal7
+      NGINX_VHOST_PRESET: drupal9
     volumes:
       - *codebase
 

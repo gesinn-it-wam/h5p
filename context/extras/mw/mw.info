@@ -1,0 +1,11 @@
+; @file
+;  h5p.info ini file
+;  Contains general information about the h5p Drupal module.
+name = MW
+core = 7.x
+
+; Information added by Drupal.org packaging script on 2022-12-14
+version = "7.x-1.51"
+core = "7.x"
+project = "mw"
+datestamp = "1671019153"

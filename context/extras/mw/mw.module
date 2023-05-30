@@ -1,0 +1,14 @@
+<?php
+
+function mw_css_alter(&$css) {
+  echo __FILE__ . __METHOD__; // exit;
+  // unset($css[drupal_get_path('module', 'system') . '/defaults.css']);
+}
+
+function mw_h5p_styles_alter(&$styles, $libraries, $mode) {
+  echo __FILE__ . __METHOD__; exit;
+}
+
+function mw_h5p_css_alter(&$styles, $libraries, $mode) {
+  echo __FILE__ . __METHOD__; exit;
+}

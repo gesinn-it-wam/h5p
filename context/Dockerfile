@@ -1,4 +1,4 @@
-FROM wodby/drupal:7-8.0
+FROM wodby/drupal:9-8.1
 
 COPY install-h5p.sh /
 COPY extras /extras
